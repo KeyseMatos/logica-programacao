@@ -1,0 +1,43 @@
+// 02 Array com as temperaturas
+const graus = [80, 91, 76, 97, 87]
+
+// Contador de valores acima de 80°
+let quant = 0
+
+// Variável para somar todas as temperaturas (usada na média)
+let soma = 0
+
+// Contador de valores acima de 90° (alerta crítico)
+let maior90 = 0
+
+// Loop que percorre todo o array
+for (let i = 0; i < graus.length; i++) {
+
+    // Soma cada temperatura
+    soma += graus[i]
+
+    // Verifica se é maior que 80° e incrementa o contador
+    if (graus[i] > 80) {
+        quant++
+    }
+   
+    // Verifica se é maior que 90° (alerta crítico)
+    if (graus[i] > 90) {
+        maior90++
+
+        // Mostra no console qual valor passou de 90°
+        console.log("Alerta Crítico:", graus[i] + "°")
+    }
+}
+
+// Calcula a média das temperaturas
+let media = soma / graus.length
+
+// Mostra quantas temperaturas passaram de 80°
+console.log("Quantidade > 80:", quant)
+
+// Mostra quantas passaram de 90°
+console.log("Quantidade > 90:", maior90)
+
+// Mostra a média final
+console.log("Média:", media + "°")
