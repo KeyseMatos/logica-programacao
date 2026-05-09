@@ -1,0 +1,24 @@
+ //Elementos da Diagonal: 7,5,8
+ // [7, 8, 9]
+ // [6, 5, 7]
+ // [10, 9,8]
+
+ let m = [
+    [7, 8, 9],
+    [6, 5, 7],
+    [10, 9,8]
+ ];
+
+ let somaDiagonal = 0;
+
+ for (let i=0; i < m.length; i++){
+
+    somaDiagonal += m[i][i];
+
+    console.log(
+        "Diagonal ["+i+"]["+i+"]:"
+        + m[i][i]
+    );
+ }
+
+ console.log("Soma: " + somaDiagonal)
